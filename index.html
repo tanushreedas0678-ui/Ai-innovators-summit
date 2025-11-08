@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Innovators Summit 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.7), #000);
+        }
+
+        .hero-lines {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .circuit-line {
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(to right, transparent, #3b82f6, transparent);
+            animation: slideLines 10s infinite linear;
+            opacity: 0.4;
+        }
+
+        @keyframes slideLines {
+            0% { transform: translateX(-100%); opacity: 0.2; }
+            50% { opacity: 0.6; }
+            100% { transform: translateX(100%); opacity: 0.2; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .powered-by {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #c084fc;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+        }
+
+        .sparkle {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            background: linear-gradient(to right, #60a5fa, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .year {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #d1d5db;
+            margin-bottom: 2rem;
+        }
+
+        .hero-details {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            color: #d1d5db;
+        }
+
+        .hero-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }
+
+        .btn {
+            padding: 1.25rem 2rem;
+            font-size: 1.125rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 50px rgba(147, 51, 234, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #3b82f6;
+            color: #60a5fa;
+        }
+
+        .btn-outline:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 0.75rem;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #9ca3af;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            background: linear-gradient(to right, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.25rem;
+            color: #9ca3af;
+        }
+
+        /* Event Overview */
+        .event-overview {
+            background: linear-gradient(to bottom, #000, #111827);
+        }
+
+        .ai-summary {
+            background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.5), rgba(88, 28, 135, 0.5));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .ai-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .schedule-card {
+            background: linear-gradient(to bottom right, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.8));
+            border: 1px solid #374151;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .schedule-card:hover {
+            border-color: rgba(168, 85, 252, 0.5);
+        }
+
+        .schedule-day {
+            font-size: 1.5rem;
+            color: #c084fc;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-date {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .event-item {
+            border-left: 2px solid rgba(59, 130, 246, 0.3);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-time {
+            font-size: 0.875rem;
+            color: #60a5fa;
+            margin-bottom: 0.25rem;
+        }
+
+        .event-title {
+            font-size: 0.875rem;
+            color: #d1d5db;
+        }
+
+        /* Venue Section */
+        .venue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .venue-card {
+            background: rgba(17, 24, 39, 0.5);
+            border: 1px solid #374151;
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+
+        .venue-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .venue-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .venue-content {
+            padding: 1.5rem;
+        }
+
+        .venue-content h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .venue-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .venue-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #d1d5db;
+        }
+
+        .map-container {
+            background: rgba(17, 24, 39, 0.5);
+            border: 1px solid #374151;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+
+        .map-container h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .map-wrapper {
+            height: 250px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            border: 1px solid #374151;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .map-address {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .map-address p {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+
+        .map-address p:first-child {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Speakers Section */
+        .speakers {
+            background: #111827;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .speaker-card {
+            background: linear-gradient(to bottom right, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.8));
+            border: 1px solid #374151;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .speaker-card:hover {
+            border-color: rgba(168, 85, 252, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .speaker-image {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .speaker-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .speaker-card:hover .speaker-image img {
+            transform: scale(1.1);
+        }
+
+        .speaker-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, #111827, transparent);
+            opacity: 0.6;
+        }
+
+        .speaker-content {
+            padding: 2rem;
+        }
+
+        .speaker-name {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .speaker-title {
+            color: #c084fc;
+            margin-bottom: 0.25rem;
+        }
+
+        .speaker-company {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+
+        .ai-bio {
+            background: rgba(30, 58, 138, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .ai-label {
+            font-size: 0.75rem;
+            color: #60a5fa;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .bio-text {
+            font-size: 0.875rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: rgba(88, 28, 135, 0.3);
+            border: 1px solid rgba(168, 85, 252, 0.5);
+            color: #d8b4fe;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+        }
+
+        /* Registration Form */
+        .registration {
+            background: linear-gradient(to bottom, #111827, #000);
+        }
+
+        .ticket-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .ticket-card {
+            background: rgba(31, 41, 55, 0.5);
+            border: 1px solid #374151;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .ticket-card:hover {
+            border-color: #6b7280;
+        }
+
+        .ticket-card.selected {
+            background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.8), rgba(88, 28, 135, 0.8));
+            border-color: #a855f7;
+            box-shadow: 0 0 30px rgba(168, 85, 252, 0.3);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            color: #fff;
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+        }
+
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .ticket-name {
+            font-size: 1.25rem;
+            color: #fff;
+        }
+
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            background: #a855f7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .ticket-price {
+            font-size: 2.5rem;
+            color: #c084fc;
+            margin-bottom: 2rem;
+        }
+
+        .ticket-features {
+            list-style: none;
+        }
+
+        .ticket-features li {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            color: #d1d5db;
+        }
+
+        .form-container {
+            background: rgba(17, 24, 39, 0.5);
+            border: 1px solid #374151;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #d1d5db;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        input {
+            background: #1f2937;
+            border: 1px solid #374151;
+            color: #fff;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        /* Chatbot */
+        .chatbot-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .chatbot-button:hover {
+            box-shadow: 0 0 50px rgba(147, 51, 234, 0.7);
+            transform: scale(1.1);
+        }
+
+        .chatbot-window {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 400px;
+            max-width: calc(100vw - 2rem);
+            background: #111827;
+            border: 1px solid rgba(168, 85, 252, 0.3);
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+
+        .chatbot-window.show {
+            display: block;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .chatbot-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .close-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 1rem;
+            background: #030712;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            display: flex;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 80%;
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+        }
+
+        .message.assistant .message-content {
+            background: #1f2937;
+            border: 1px solid #374151;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+        }
+
+        .chat-input-container {
+            padding: 1rem;
+            background: #111827;
+            border-top: 1px solid #374151;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: #1f2937;
+            border: 1px solid #374151;
+            color: #fff;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+        }
+
+        .send-btn {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            border: none;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-details {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .speakers-grid,
+            .ticket-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chatbot-window {
+                width: calc(100vw - 2rem);
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none !important;
+        }
+
+        /* View modes */
+        .view {
+            display: none;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        /* Icons (using Unicode symbols) */
+        .icon {
+            display: inline-block;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Landing View -->
+    <div id="landing-view" class="view active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920" alt="AI Technology">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-lines">
+                <div class="circuit-line" style="top: 20%;"></div>
+                <div class="circuit-line" style="top: 35%; animation-delay: 2s;"></div>
+                <div class="circuit-line" style="top: 50%; animation-delay: 4s;"></div>
+                <div class="circuit-line" style="top: 65%; animation-delay: 6s;"></div>
+                <div class="circuit-line" style="top: 80%; animation-delay: 8s;"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="powered-by">
+                    <span class="sparkle">✨</span>
+                    <span>Powered by AI</span>
+                    <span class="sparkle">✨</span>
+                </div>
+
+                <h1>AI Innovators Summit</h1>
+                <div class="year">2025</div>
+
+                <div class="hero-details">
+                    <div class="hero-detail">
+                        <span>📅</span>
+                        <span>November 14-16, 2025</span>
+                    </div>
+                    <div style="width: 1px; height: 24px; background: #4b5563;"></div>
+                    <div class="hero-detail">
+                        <span>📍</span>
+                        <span>SGT University, Gurugram</span>
+                    </div>
+                </div>
+
+                <p class="hero-description">
+                    Join the world's leading AI innovators, researchers, and visionaries
+                    for three days of cutting-edge insights, groundbreaking
+                    demonstrations, and unparalleled networking opportunities.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showRegistration()">Register Now</button>
+                    <button class="btn btn-outline" onclick="scrollToOverview()">Learn More</button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Expert Speakers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Sessions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Attendees</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Overview -->
+        <section id="event-overview" class="event-overview">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Event Overview</h2>
+                    <p>Discover the latest breakthroughs in artificial intelligence and connect with industry pioneers shaping the future of technology.</p>
+                </div>
+
+                <div class="ai-summary">
+                    <div class="ai-icon">🧠</div>
+                    <div>
+                        <h3 style="color: #60a5fa; margin-bottom: 0.75rem;">AI-Generated Event Summary</h3>
+                        <p style="color: #d1d5db; line-height: 1.6;">
+                            The AI Innovators Summit 2025 is the premier gathering for AI professionals, featuring over 50 world-renowned speakers across 100+ sessions. Attendees will explore cutting-edge topics including machine learning, neural networks, AI ethics, and practical applications across industries. The event offers unique opportunities for hands-on workshops, networking with 5000+ peers, and witnessing groundbreaking product launches from leading tech companies.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 style="text-align: center; font-size: 2rem; color: #fff; margin-bottom: 2rem;">Schedule Highlights</h3>
+
+                <div class="schedule-grid">
+                    <div class="schedule-card">
+                        <div class="schedule-day">Day 1</div>
+                        <div class="schedule-date">November 14, 2025</div>
+                        <div class="event-item">
+                            <div class="event-time">9:00 AM</div>
+                            <div class="event-title">Registration & Welcome Coffee</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">10:00 AM</div>
+                            <div class="event-title">Opening Keynote: The Future of AI</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">2:00 PM</div>
+                            <div class="event-title">AI in Healthcare Panel</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">5:00 PM</div>
+                            <div class="event-title">Networking Reception</div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-card">
+                        <div class="schedule-day">Day 2</div>
+                        <div class="schedule-date">November 15, 2025</div>
+                        <div class="event-item">
+                            <div class="event-time">9:00 AM</div>
+                            <div class="event-title">AI Ethics & Governance</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">11:00 AM</div>
+                            <div class="event-title">Machine Learning Workshops</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">3:00 PM</div>
+                            <div class="event-title">Startup Pitch Competition</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">6:00 PM</div>
+                            <div class="event-title">Innovation Showcase</div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-card">
+                        <div class="schedule-day">Day 3</div>
+                        <div class="schedule-date">November 16, 2025</div>
+                        <div class="event-item">
+                            <div class="event-time">9:00 AM</div>
+                            <div class="event-title">Deep Learning Masterclass</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">12:00 PM</div>
+                            <div class="event-title">Industry Leaders Q&A</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">3:00 PM</div>
+                            <div class="event-title">Closing Keynote & Awards</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-time">5:00 PM</div>
+                            <div class="event-title">Farewell Drinks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Section -->
+        <section class="venue">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Event Venue</h2>
+                    <p>Discover the location and details of the AI Innovators Summit 2025</p>
+                </div>
+
+                <div class="venue-grid">
+                    <div class="venue-card">
+                        <div class="venue-image">
+                            <img src="https://images.unsplash.com/photo-1685456891912-c09f9cd252eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDF8fHx8MTc2MTg4MTQ3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="SGT University">
+                        </div>
+                        <div class="venue-content">
+                            <h3>SGT University</h3>
+                            <div class="venue-info">
+                                <div class="venue-info-item">
+                                    <span>📍</span>
+                                    <span>Gurugram-Badli Road, Budhera, Gurugram, Haryana 122505</span>
+                                </div>
+                                <div class="venue-info-item">
+                                    <span>📅</span>
+                                    <span>November 14-16, 2025</span>
+                                </div>
+                                <div class="venue-info-item">
+                                    <span>🕒</span>
+                                    <span>9:00 AM - 7:00 PM Daily</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <h3>Interactive Location Map</h3>
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.7736339634384!2d77.06344831506085!3d28.376586682496936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3dd85b9a48e1%3A0x5a7b8c2c4b2b2b2b!2sSGT%20University!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="map-address">
+                        <p>SGT University Campus</p>
+                        <p>Gurugram-Badli Road, Budhera, Gurugram, Haryana 122505, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section class="speakers">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="background: linear-gradient(to right, #c084fc, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Featured Speakers</h2>
+                    <p>Learn from the brightest minds in artificial intelligence and technology innovation</p>
+                </div>
+
+                <div class="speakers-grid">
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="https://images.unsplash.com/photo-1758691736067-b309ee3ef7b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Dr. Sarah Chen">
+                            <div class="speaker-gradient"></div>
+                        </div>
+                        <div class="speaker-content">
+                            <h3 class="speaker-name">Dr. Sarah Chen</h3>
+                            <div class="speaker-title">Chief AI Officer</div>
+                            <div class="speaker-company">TechCorp AI</div>
+                            <div class="ai-bio">
+                                <div class="ai-label">AI Summary</div>
+                                <p class="bio-text">Pioneer in neural network architecture with 15+ years experience. Led breakthrough research in transformer models and natural language processing. Published 50+ papers and holds 12 patents in AI innovation.</p>
+                            </div>
+                            <div class="expertise-tags">
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Neural Networks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="https://images.unsplash.com/photo-1624555130882-dcfa8ecb17ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Marcus Johnson">
+                            <div class="speaker-gradient"></div>
+                        </div>
+                        <div class="speaker-content">
+                            <h3 class="speaker-name">Marcus Johnson</h3>
+                            <div class="speaker-title">VP of Machine Learning</div>
+                            <div class="speaker-company">DataMind Inc</div>
+                            <div class="ai-bio">
+                                <div class="ai-label">AI Summary</div>
+                                <p class="bio-text">Expert in scalable AI systems and ML operations. Built AI infrastructure serving billions of users. Specializes in ethical AI deployment and responsible innovation practices.</p>
+                            </div>
+                            <div class="expertise-tags">
+                                <span class="tag">MLOps</span>
+                                <span class="tag">AI Ethics</span>
+                                <span class="tag">Scalability</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="speaker-card">
+                        <div class="speaker-image">
+                            <img src="https://images.unsplash.com/photo-1758691736067-b309ee3ef7b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Dr. Priya Patel">
+                            <div class="speaker-gradient"></div>
+                        </div>
+                        <div class="speaker-content">
+                            <h3 class="speaker-name">Dr. Priya Patel</h3>
+                            <div class="speaker-title">Research Director</div>
+                            <div class="speaker-company">AI Research Lab</div>
+                            <div class="ai-bio">
+                                <div class="ai-label">AI Summary</div>
+                                <p class="bio-text">Leading researcher in computer vision and autonomous systems. Developed state-of-the-art object detection algorithms used globally. Named one of MIT's Top 35 Innovators Under 35.</p>
+                            </div>
+                            <div class="expertise-tags">
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">Robotics</span>
+                                <span class="tag">Autonomous Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="registration" class="registration">
+            <div class="container">
+                <div class="section-title">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="color: #c084fc;">✨</span>
+                        <span style="color: #c084fc; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.875rem;">Smart Registration</span>
+                        <span style="color: #c084fc;">✨</span>
+                    </div>
+                    <h2>Secure Your Spot</h2>
+                    <p>AI-assisted registration with smart auto-fill and instant recommendations</p>
+                </div>
+
+                <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 2rem;">Choose Your Ticket</h3>
+
+                <div class="ticket-grid">
+                    <div class="ticket-card" onclick="selectTicket('general')">
+                        <div class="ticket-header">
+                            <h4 class="ticket-name">General Admission</h4>
+                            <div class="checkmark hidden" id="check-general">✓</div>
+                        </div>
+                        <div class="ticket-price">₹500</div>
+                        <ul class="ticket-features">
+                            <li><span style="color: #4ade80;">✓</span> Access to all sessions</li>
+                            <li><span style="color: #4ade80;">✓</span> Conference materials</li>
+                            <li><span style="color: #4ade80;">✓</span> Networking events</li>
+                            <li><span style="color: #4ade80;">✓</span> Coffee & lunch included</li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-card" onclick="selectTicket('vip')">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="ticket-header">
+                            <h4 class="ticket-name">VIP Pass</h4>
+                            <div class="checkmark hidden" id="check-vip">✓</div>
+                        </div>
+                        <div class="ticket-price">₹1000</div>
+                        <ul class="ticket-features">
+                            <li><span style="color: #4ade80;">✓</span> All General features</li>
+                            <li><span style="color: #4ade80;">✓</span> VIP lounge access</li>
+                            <li><span style="color: #4ade80;">✓</span> Priority seating</li>
+                            <li><span style="color: #4ade80;">✓</span> Exclusive dinner with speakers</li>
+                            <li><span style="color: #4ade80;">✓</span> 1-on-1 mentoring session</li>
+                            <li><span style="color: #4ade80;">✓</span> Premium swag bag</li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-card" onclick="selectTicket('student')">
+                        <div class="ticket-header">
+                            <h4 class="ticket-name">Student Pass</h4>
+                            <div class="checkmark hidden" id="check-student">✓</div>
+                        </div>
+                        <div class="ticket-price">₹199</div>
+                        <ul class="ticket-features">
+                            <li><span style="color: #4ade80;">✓</span> Access to all sessions</li>
+                            <li><span style="color: #4ade80;">✓</span> Conference materials</li>
+                            <li><span style="color: #4ade80;">✓</span> Networking events</li>
+                            <li><span style="color: #4ade80;">✓</span> Valid student ID required</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <form id="registration-form" onsubmit="handleRegistration(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">👤 First Name</label>
+                                <input type="text" id="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">👤 Last Name</label>
+                                <input type="text" id="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="email">✉️ Email Address</label>
+                            <input type="email" id="email" required placeholder="john.doe@example.com">
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="company">🏢 Company</label>
+                                <input type="text" id="company" required placeholder="Tech Corp">
+                            </div>
+                            <div class="form-group">
+                                <label for="jobTitle">💼 Job Title</label>
+                                <input type="text" id="jobTitle" required placeholder="Software Engineer">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem; padding: 1.5rem;">
+                            Continue to Payment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- AI Chatbot -->
+    <button class="chatbot-button" onclick="toggleChat()" id="chatbot-btn">
+        <span style="font-size: 2rem;">🤖</span>
+    </button>
+
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🤖</div>
+                <div>
+                    <div style="font-weight: 600;">AI Assistant</div>
+                    <div style="font-size: 0.75rem; color: #dbeafe;">Always here to help</div>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">✕</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="message assistant">
+                <div class="message-content">
+                    <div style="font-size: 0.75rem; color: #c084fc; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.25rem;">
+                        <span>🤖</span> AI
+                    </div>
+                    <p style="font-size: 0.875rem;">Hello! I'm your AI assistant for the AI Innovators Summit 2025. How can I help you with your registration today?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Ask me anything..." onkeypress="handleChatKeypress(event)">
+            <button class="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let selectedTicketType = 'general';
+
+        // Ticket selection
+        function selectTicket(type) {
+            selectedTicketType = type;
+            
+            // Remove all selected classes
+            document.querySelectorAll('.ticket-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            document.querySelectorAll('.checkmark').forEach(check => {
+                check.classList.add('hidden');
+            });
+
+            // Add selected class to clicked ticket
+            event.currentTarget.classList.add('selected');
+            document.getElementById(`check-${type}`).classList.remove('hidden');
+        }
+
+        // Initialize first ticket as selected
+        window.addEventListener('DOMContentLoaded', () => {
+            selectTicket('general');
+        });
+
+        // Smooth scroll
+        function scrollToOverview() {
+            document.getElementById('event-overview').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showRegistration() {
+            document.getElementById('registration').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Registration form
+        function handleRegistration(event) {
+            event.preventDefault();
+            
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                jobTitle: document.getElementById('jobTitle').value,
+                ticketType: selectedTicketType
+            };
+
+            // Store in sessionStorage
+            sessionStorage.setItem('registrationData', JSON.stringify(formData));
+            
+            // Show success message
+            alert(`Thank you ${formData.firstName}! Your registration for the ${formData.ticketType.toUpperCase()} ticket has been received. In a real application, this would proceed to payment.`);
+            
+            // Reset form
+            document.getElementById('registration-form').reset();
+        }
+
+        // Chatbot
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatbot-window');
+            const chatBtn = document.getElementById('chatbot-btn');
+            
+            if (chatWindow.classList.contains('show')) {
+                chatWindow.classList.remove('show');
+                chatBtn.style.display = 'block';
+            } else {
+                chatWindow.classList.add('show');
+                chatBtn.style.display = 'none';
+            }
+        }
+
+        function handleChatKeypress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            // Add user message
+            addChatMessage('user', message);
+            input.value = '';
+
+            // Simulate AI response
+            setTimeout(() => {
+                const response = getAIResponse(message);
+                addChatMessage('assistant', response);
+            }, 1000);
+        }
+
+        function addChatMessage(role, content) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+            
+            if (role === 'assistant') {
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <div style="font-size: 0.75rem; color: #c084fc; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.25rem;">
+                            <span>🤖</span> AI
+                        </div>
+                        <p style="font-size: 0.875rem;">${content}</p>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <p style="font-size: 0.875rem;">${content}</p>
+                    </div>
+                `;
+            }
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function getAIResponse(message) {
+            const lowerMessage = message.toLowerCase();
+
+            if (lowerMessage.includes('ticket') || lowerMessage.includes('price')) {
+                return "We offer three ticket types: General Admission ($499), VIP Pass ($999) with exclusive networking, and Student Pass ($199) with valid ID. Which ticket interests you?";
+            } else if (lowerMessage.includes('speaker')) {
+                return "We have 50+ world-renowned speakers including Dr. Sarah Chen, Marcus Johnson, and Dr. Priya Patel. You can view all speakers in the Speakers section. Would you like me to recommend sessions based on your interests?";
+            } else if (lowerMessage.includes('location') || lowerMessage.includes('venue')) {
+                return "The summit takes place at SGT University in Gurugram, India from June 15-17, 2025. The venue features modern facilities perfect for this prestigious AI conference. Would you like directions or accommodation recommendations?";
+            } else if (lowerMessage.includes('schedule')) {
+                return "The event runs from 9 AM to 7 PM daily. Day 1 features the opening keynote, Day 2 has workshops and competitions, and Day 3 includes the closing keynote and awards. Want details about specific sessions?";
+            } else if (lowerMessage.includes('help') || lowerMessage.includes('register')) {
+                return "I can help you choose the right ticket, answer questions about speakers, sessions, location, or guide you through registration. What would you like to know?";
+            } else {
+                return "That's a great question! For detailed information, I recommend reviewing our Event Overview section. Is there anything specific about registration, tickets, or the schedule I can help clarify?";
+            }
+        }
+
+        // Countdown timer (simple version)
+        function updateCountdown() {
+            const eventDate = new Date('2025-06-15T09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update if countdown elements exist
+            if (document.getElementById('days')) {
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            }
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
